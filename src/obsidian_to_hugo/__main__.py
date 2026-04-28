@@ -35,16 +35,7 @@ def main() -> None:
     """
     Main entry point of the CLI.
     """
-    args = parser.parse_args()
-    if not args.hugo_content_dir or not os.path.isdir(args.hugo_content_dir):
-        parser.error("The hugo content directory does not exist.")
-    if not args.obsidian_vault_dir or not os.path.isdir(args.obsidian_vault_dir):
-        parser.error("The obsidian vault directory does not exist.")
-    obsidian_to_hugo = ObsidianToHugo(
-        obsidian_vault_dir=args.obsidian_vault_dir,
-        hugo_content_dir=args.hugo_content_dir,
-    )
-    obsidian_to_hugo.run()
+    pass
 
 
 if __name__ == "__main__":
